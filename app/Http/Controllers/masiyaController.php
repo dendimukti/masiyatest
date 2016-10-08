@@ -10,7 +10,7 @@ class masiyaController extends Controller
 {
 	
 	public function ParsingData(){
-		$file=asset('../resources/assets/data.xml');
+		$file=asset('resources/assets/data.xml');
 		$xml=simplexml_load_file($file);
 		$array = json_decode(json_encode((array) $xml), 1);
 		$array = array($xml->getName() => $array);	
